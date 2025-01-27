@@ -1,0 +1,6 @@
+@if(!isAuthenticated) {
+  <app-header></app-header>
+} @else {
+  <app-auth-header></app-auth-header>
+}
+<router-outlet></router-outlet>
