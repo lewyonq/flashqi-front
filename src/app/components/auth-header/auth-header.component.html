@@ -1,15 +1,14 @@
 <header class="header">
     <div class="header-container">
       <div class="logo">
-        <a href="/">
+        <a routerLink="/home">
           <img src="assets/images/test-image.webp" alt="Logo">
         </a>
       </div>
       <nav class="nav-links">
-        <a class="nav-link">X</a>
-        <a class="nav-link">Y</a>
-        <button class="get-started-button">Sign out</button>
-        <a (click)="onLogout()" class="nav-link">Sign out</a>
+        <a routerLink="/how-to-play" class="nav-link">How to play</a>
+        <button routerLink="/new-game" class="get-started-button">New game</button>
+        <a (click)="onLogout()" class="nav-link" style="cursor: pointer;">Sign out</a>
       </nav>
     </div>
   </header>

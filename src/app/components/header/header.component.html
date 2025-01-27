@@ -1,13 +1,14 @@
 <header class="header">
     <div class="header-container">
       <div class="logo">
-        <a href="/">
+        <a routerLink="/home">
           <img src="assets/images/test-image.webp" alt="Logo">
         </a>
       </div>
       <nav class="nav-links">
-        <a class="nav-link">How to play</a>
-        <a (click)="onLogin()" class="nav-link">Login</a>
+        <a routerLink="/contact" class="nav-link">Contact</a>
+        <a routerLink="/about" class="nav-link">About</a>
+        <a routerLink="/login" class="nav-link">Login</a>
         <button class="get-started-button">Get Started</button>
       </nav>
     </div>
