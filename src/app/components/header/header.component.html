@@ -1,58 +1,28 @@
 <header class="header">
-    <nav class="navbar navbar-expand-md">
-      <div class="logo">
-        <a routerLink="/home">
-          <img src="assets/images/test-image.webp" alt="Logo">
-        </a>
-      </div>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <mat-icon style="color:white">menu</mat-icon>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav nav-links">
-          <li>
-            <a routerLink="/contact" class="nav-link" routerLinkActive='active' (click)="handleMenuClick()">Contact</a>
-          </li>
-          <li>
-            <a routerLink="/about" class="nav-link" routerLinkActive='active'>About</a>            
-          </li>
-          <li>
-            <a routerLink="/login" class="nav-link" routerLinkActive='active'>Login</a>
-          </li>
-          <li>
-            <button class="get-started-button">Get Started</button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-</header>
-<!-- <header class="header">
   <nav class="navbar navbar-expand-md">
-    <div class="container-fluid">
-      <div class="logo">
-        <a routerLink="/home">
-          <img src="assets/images/test-image.webp" alt="Logo"/>
-        </a>
-      </div>
-      <button style="color: gray" class="navbar-toggler" (click)="handleMenuClick()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        Menu <img class="hamburger-icon" src="assets/icons/Hamburger_icon.png">
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav" style="padding-left: 7px;" [ngClass]="{'show': isMenuOpen}">
-        <ul class="navbar-nav nav-links">
-          <li>
-            <a routerLink="/contact" class="nav-link" routerLinkActive='active' (click)="handleMenuClick()">Contact</a>
-          </li>
-          <li>
-            <a routerLink="/about" class="nav-link">About</a>
-          </li>
-          <li>
-            <a routerLink="/login" class="nav-link">Login</a>
-          </li>
-          <li>
-            <button class="get-started-button">Get Started</button>
-          </li>
-        </ul>
-      </div>
+    <div class="logo">
+      <a routerLink="/home">
+        <img src="assets/images/test-image.webp" alt="Logo">
+      </a>
+    </div>
+    <button (click)="handleMenuClick(true)" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <mat-icon style="color:white">menu</mat-icon>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{'show': isMenuOpen}">
+      <ul class="navbar-nav nav-links">
+        <li>
+          <a routerLink="/contact" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Contact</a>
+        </li>
+        <li>
+          <a routerLink="/about" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">About</a>
+        </li>
+        <li>
+          <a routerLink="/login" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Login</a>
+        </li>
+        <li>
+          <a routerLink="/sign-up" class="get-started-button nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">Get Started</a>
+        </li>
+      </ul>
     </div>
   </nav>
-</header> -->
+</header>

@@ -37,6 +37,15 @@
     &:hover {
       color: #E94E31;
     }
+
+    &.active {
+      color: #cb6351;
+    }
+    
+    &.button-active {
+      background-color: #cb6351;
+      color: white;
+    }
   }
   
   .get-started-button {

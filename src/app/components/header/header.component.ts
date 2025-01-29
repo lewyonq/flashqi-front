@@ -20,7 +20,7 @@ export class HeaderComponent {
     this.authService.onLogin();
   }
 
-  handleMenuClick() {
-    console.log('Menu clicked');
+  handleMenuClick(isMenuOpen: boolean) {
+    this.isMenuOpen = isMenuOpen;
   }
 }

@@ -29,5 +29,9 @@ export const routes: Routes = [
     {
         path: 'new-game',
         loadComponent: () => import('./components/new-game/new-game.component').then(m => m.NewGameComponent)
+    },
+    {
+        path: 'sign-up',
+        loadComponent: () => import('./components/sign-up/sign-up.component').then(m => m.SignUpComponent)
     }
 ];
