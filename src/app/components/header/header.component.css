@@ -7,7 +7,7 @@
     z-index: 1000;
   }
   
-  .header-container {
+  .navbar {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -53,4 +53,8 @@
       background-color: #E94E31;
       color: #fff;
     }
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
   }
