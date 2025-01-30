@@ -31,6 +31,12 @@
             <a routerLink="/new-game" class="button-imitation nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">New game</a>
           </li>
           <li>
+            <a routerLink="/decks" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Decks</a>
+          </li>
+          <li>
+            <a routerLink="/profile" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Profile</a>
+          </li>
+          <li>
             <a (click)="onLogout()" class="nav-link" style="cursor: pointer;" routerLinkActive='active' (click)="handleMenuClick(false)">Sign out</a>
           </li>
         }
