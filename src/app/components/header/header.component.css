@@ -52,7 +52,7 @@
       }
   }
   
-  .get-started-button {
+  .button-imitation {
     @media (min-width: 768px) {
       background-color: #fff;
       color: #0D0D0D;

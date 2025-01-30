@@ -12,12 +12,21 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class HeaderComponent {
   isMenuOpen = false;
+  isAuthenticated: boolean = false;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) {
+    this.authService.isAuthenticated$.subscribe(
+      isAuthenticated => this.isAuthenticated = isAuthenticated
+    );
+  }
 
   onLogin() {
     console.log('Login clicked');
     this.authService.onLogin();
+  }
+  
+  onLogout() {
+    this.authService.onLogout();
   }
 
   handleMenuClick(isMenuOpen: boolean) {

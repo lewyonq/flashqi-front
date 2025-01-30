@@ -13,15 +13,27 @@
         <li>
           <a routerLink="/contact" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Contact</a>
         </li>
-        <li>
-          <a routerLink="/about" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">About</a>
-        </li>
-        <li>
-          <a routerLink="/login" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Login</a>
-        </li>
-        <li>
-          <a routerLink="/sign-up" class="get-started-button nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">Get Started</a>
-        </li>
+        @if (!isAuthenticated) {
+          <li>
+            <a routerLink="/about" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">About</a>
+          </li>
+          <li>
+            <a routerLink="/login" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Login</a>
+          </li>
+          <li>
+            <a routerLink="/sign-up" class="button-imitation nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">Get Started</a>
+          </li>
+        } @else {
+          <li>
+            <a routerLink="/how-to-play" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">How to play</a>
+          </li>
+          <li>
+            <a routerLink="/new-game" class="button-imitation nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">New game</a>
+          </li>
+          <li>
+            <a (click)="onLogout()" class="nav-link" style="cursor: pointer;" routerLinkActive='active' (click)="handleMenuClick(false)">Sign out</a>
+          </li>
+        }
       </ul>
     </div>
   </nav>
