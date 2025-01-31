@@ -40,6 +40,12 @@ export const routes: Routes = [
     },
     {
         path: 'decks',
-        loadComponent: () => import('./components/decks/decks.component').then(m => m.DecksComponent)
+        loadComponent: () => import('./components/decks/decks.component').then(m => m.DecksComponent),
+        children: [
+            {
+                path: ':id',
+                loadComponent: () => import('./components/decks/deck-detail/deck-detail.component').then(m => m.DeckDetailComponent)
+            }
+        ]
     }
 ];

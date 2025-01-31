@@ -1,4 +1,8 @@
-@for (deck of decks; track $index) {
-      <h3>{{ deck.name }}</h3>
-      <h3>{{ deck.description }}</h3>
-}
+<div>
+    @for (deck of decks; track $index) {
+        <h3>{{ deck.name }}</h3>
+        <h3>{{ deck.description }}</h3>
+        <mat-icon (click)="getDeckDetails(deck.id)">arrow_forward_ios</mat-icon>
+  }
+</div>
+<router-outlet></router-outlet>
