@@ -3,10 +3,11 @@ import { Deck } from '../../models/deck.model';
 import { DeckService } from '../../services/deck.service';
 import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterModule } from '@angular/router';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-decks',
-  imports: [MatIconModule, RouterModule],
+  imports: [MatIconModule, RouterModule, MatListModule],
   templateUrl: './decks.component.html',
   styleUrl: './decks.component.css'
 })

@@ -1,0 +1,6 @@
+.deck-container {
+    display: flex; 
+    align-items: center; 
+    background-color: antiquewhite; 
+    width: 100%;
+}
