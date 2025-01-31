@@ -1,7 +1,8 @@
 <div style="display: flex; height: 100vh;">
-  <div style="width: 33.33%; border-right: 1px solid #ccc; padding: 20px;">
-    <div class="container">
+  <div class="deck-list-container">
+    <div class="container deck-title">
       <h1>Decks</h1>
+      <mat-icon class="add-circle-icon" (click)="addDeck()">add_circle</mat-icon>
     </div>
     <div class="container">
       <mat-list>
@@ -11,11 +12,11 @@
               <span class="material-symbols-outlined">
                 playing_cards
               </span>
-              <div style="margin-left: 8px; flex-grow: 1;">
+              <div class="deck-description">
                 <h3 matListItemTitle>{{ deck.name }}</h3>
                 <p matListItemLine>{{ deck.description }}</p>
               </div>
-              <mat-icon (click)="getDeckDetails(deck.id)">arrow_forward_ios</mat-icon>
+              <mat-icon class="arrow-icon" (click)="getDeckDetails(deck.id)">arrow_forward_ios</mat-icon>
             </div>
           </mat-list-item>
         }

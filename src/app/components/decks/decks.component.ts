@@ -25,4 +25,10 @@ export class DecksComponent implements OnInit{
   getDeckDetails(deckId: number) {
     this.router.navigate(['/decks', deckId]);
   }
+  
+  addDeck() {
+    // Add logic to create a new deck
+    console.log('add deck');
+    this.router.navigate(['/decks/new']);
+  }
 }

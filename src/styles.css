@@ -1,9 +1,23 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2196F3; /* Main brand color */
+  --secondary-color: #FFC107; /* Secondary brand color */
+  --accent-color: #242223; /* Accent color for CTAs */
+  --background-color: #000000; /* Main background color */
+  --text-color: #FFFFFF; /* Main text color */
+  --error-color: #F44336; /* Error/danger color */
+  --success-color: #4CAF50; /* Success color */
+  --border-color: #E0E0E0; /* Border color */
+  --hover-color: #E94E31; /* Hover state color */
+  --active-color: #ff5436;
+}

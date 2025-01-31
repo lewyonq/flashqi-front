@@ -1,5 +1,5 @@
 .header {
-    background-color: #0D0D0D;
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -34,28 +34,28 @@
     transition: color 0.2s ease;
   
     &:hover {
-      color: #E94E31;
+      color: var(--hover-color);
     }
 
     &.active {
-      color: #ff5436;
+      color: var(--active-color);
     }
     
       &.button-active {
         @media (min-width: 768px) {
-          background-color: #ff5436;
-          color: white;
+          background-color: var(--active-color);
+          color: var(--text-color);
         }
         @media (max-width: 768px) {
-          color: #ff5436;
+          color: var(--active-color);
         }
       }
   }
   
   .button-imitation {
     @media (min-width: 768px) {
-      background-color: #fff;
-      color: #0D0D0D;
+      background-color: var(--text-color);
+      color: var(--background-color);
       padding: 0.5rem 1rem;
       border-radius: 4px;
       border: none;
@@ -64,8 +64,8 @@
       transition: all 0.2s ease;
     
       &:hover {
-        background-color: #E94E31;
-        color: #fff;
+        background-color: var(--hover-color);
+        color: var(--text-color);
       }
     }
   }

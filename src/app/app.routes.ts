@@ -43,6 +43,10 @@ export const routes: Routes = [
         loadComponent: () => import('./components/decks/decks.component').then(m => m.DecksComponent),
         children: [
             {
+                path: 'new',
+                loadComponent: () => import('./components/decks/new-deck/new-deck.component').then(m => m.NewDeckComponent)
+            },
+            {
                 path: ':id',
                 loadComponent: () => import('./components/decks/deck-detail/deck-detail.component').then(m => m.DeckDetailComponent)
             }

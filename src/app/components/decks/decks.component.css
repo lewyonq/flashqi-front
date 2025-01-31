@@ -1,6 +1,44 @@
 .deck-container {
     display: flex; 
-    align-items: center; 
-    background-color: antiquewhite; 
+    align-items: center;
+    color: var(--text-color); 
+    background-color: var(--accent-color); 
     width: 100%;
+}
+
+.deck-list-container {
+    width: 33.33%; 
+    border-right: 1px solid #ccc; 
+    padding: 20px;
+}
+
+.deck-description {
+    margin-left: 8px;
+    flex-grow: 1;
+
+    h3, p {
+        color: var(--text-color);
+    }
+}
+
+.deck-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-circle-icon {
+    transform: scale(2); 
+    cursor: pointer;
+    &:hover {
+        color: var(--hover-color);
+    }
+}
+
+.arrow-icon {
+    transform: scale(1.2); 
+    cursor: pointer;
+    &:hover {
+        color: var(--hover-color);
+    }
 }
