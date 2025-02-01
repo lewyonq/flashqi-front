@@ -10,9 +10,6 @@
     </button>
     <div class="collapse navbar-collapse col-md-9" style="justify-content: center;" id="navbarNav" [ngClass]="{'show': isMenuOpen}">
       <ul class="navbar-nav nav-links nav-links-gap">
-        <li>
-          <a routerLink="/contact" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Contact</a>
-        </li>
         @if (!isAuthenticated) {
           <a routerLink="/get-started" class="button-imitation nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">Get Started</a>
           <li>
