@@ -20,7 +20,9 @@
   
   .nav-links {
     align-items:end;
-
+  }
+  
+  .nav-links-gap {
     @media (min-width: 768px) {
       gap: 2rem;      
     }
@@ -61,7 +63,8 @@
       font-size: 1rem;
       cursor: pointer;
       transition: all 0.2s ease;
-    
+      text-align: center;
+      
       &:hover {
         background-color: var(--hover-color);
         color: var(--text-color);

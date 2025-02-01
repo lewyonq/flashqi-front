@@ -9,11 +9,12 @@
       <mat-icon style="color:var(--text-color)">menu</mat-icon>
     </button>
     <div class="collapse navbar-collapse col-md-9" style="justify-content: center;" id="navbarNav" [ngClass]="{'show': isMenuOpen}">
-      <ul class="navbar-nav nav-links">
+      <ul class="navbar-nav nav-links nav-links-gap">
         <li>
           <a routerLink="/contact" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Contact</a>
         </li>
         @if (!isAuthenticated) {
+          <a routerLink="/get-started" class="button-imitation nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">Get Started</a>
           <li>
             <a routerLink="/about" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">About</a>
           </li>
@@ -40,7 +41,7 @@
             <a routerLink="/login" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Login</a>
           </li>
           <li>
-            <a routerLink="/sign-up" class="button-imitation nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">Get Started</a>
+            <a routerLink="/sign-up" class="button-imitation nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">Sign up</a>
           </li>
         } @else {
           <li>
