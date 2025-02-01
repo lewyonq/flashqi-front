@@ -1,5 +1,4 @@
 .header {
-    background-color: rgba(0, 0, 0, 0.9);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -68,8 +67,4 @@
         color: var(--text-color);
       }
     }
-  }
-
-  .navbar-collapse {
-    justify-content: flex-end;
   }

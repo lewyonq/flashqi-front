@@ -1,6 +1,6 @@
 <header class="header">
   <nav class="navbar navbar-expand-md">
-    <div class="logo">
+    <div class="logo col-md-1">
       <a routerLink="/home">
         <img src="assets/images/test-image.webp" alt="Logo">
       </a>
@@ -8,7 +8,7 @@
     <button (click)="handleMenuClick(true)" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <mat-icon style="color:var(--text-color)">menu</mat-icon>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{'show': isMenuOpen}">
+    <div class="collapse navbar-collapse col-md-9" style="justify-content: center;" id="navbarNav" [ngClass]="{'show': isMenuOpen}">
       <ul class="navbar-nav nav-links">
         <li>
           <a routerLink="/contact" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Contact</a>
@@ -16,12 +16,6 @@
         @if (!isAuthenticated) {
           <li>
             <a routerLink="/about" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">About</a>
-          </li>
-          <li>
-            <a routerLink="/login" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Login</a>
-          </li>
-          <li>
-            <a routerLink="/sign-up" class="button-imitation nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">Get Started</a>
           </li>
         } @else {
           <li>
@@ -36,6 +30,19 @@
           <li>
             <a routerLink="/profile" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Profile</a>
           </li>
+        }
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse col-md-2" style="justify-content: flex-end;" id="navbarNav" [ngClass]="{'show': isMenuOpen}">
+      <ul class="navbar-nav nav-links">
+        @if (!isAuthenticated) {
+          <li>
+            <a routerLink="/login" class="nav-link" routerLinkActive='active' (click)="handleMenuClick(false)">Login</a>
+          </li>
+          <li>
+            <a routerLink="/sign-up" class="button-imitation nav-link" routerLinkActive='button-active' (click)="handleMenuClick(false)">Get Started</a>
+          </li>
+        } @else {
           <li>
             <a (click)="onLogout()" class="nav-link" style="cursor: pointer;" routerLinkActive='active' (click)="handleMenuClick(false)">Sign out</a>
           </li>
