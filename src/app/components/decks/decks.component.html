@@ -1,29 +1,36 @@
-<div style="display: flex; height: 100vh;">
-  <div class="deck-list-container">
+<div class="deck-page">
+  <div class="deck-list-container col-md-3">
     <div class="container deck-title">
       <h1>Decks</h1>
       <mat-icon class="add-circle-icon" (click)="addDeck()">add_circle</mat-icon>
     </div>
     <div class="container">
-      <mat-list>
-        @for (deck of decks; track $index) {
-          <mat-list-item>
-            <div class="deck-container">
-              <span class="material-symbols-outlined">
-                playing_cards
-              </span>
-              <div class="deck-description">
-                <h3 matListItemTitle>{{ deck.name }}</h3>
-                <p matListItemLine>{{ deck.description }}</p>
+      @if (decks.length === 0) {
+        <div class="no-decks">
+          <p>No decks available.</p>
+          <p>Click plus icon to add new deck</p>
+        </div>
+      } @else {
+        <mat-list>
+          @for (deck of decks; track $index) {
+            <mat-list-item>
+              <div class="deck-container">
+                <span class="material-symbols-outlined">
+                  playing_cards
+                </span>
+                <div class="deck-description">
+                  <h3 matListItemTitle>{{ deck.name }}</h3>
+                  <p matListItemLine>{{ deck.description }}</p>
+                </div>
+                <mat-icon class="arrow-icon" (click)="getDeckDetails(deck.id)">arrow_forward_ios</mat-icon>
               </div>
-              <mat-icon class="arrow-icon" (click)="getDeckDetails(deck.id)">arrow_forward_ios</mat-icon>
-            </div>
-          </mat-list-item>
-        }
-      </mat-list>
+            </mat-list-item>
+          }
+        </mat-list>
+      }
     </div>
   </div>
-  <div style="width: 66.67%; padding: 20px;">
+  <div style="padding: 20px;" class="col-md-9">
     <router-outlet></router-outlet>
   </div>
 </div>

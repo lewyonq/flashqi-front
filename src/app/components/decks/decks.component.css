@@ -1,15 +1,12 @@
+.deck-page {
+    display: flex; 
+}
+
 .deck-container {
     display: flex; 
     align-items: center;
     color: var(--text-color); 
     background-color: var(--accent-color); 
-    width: 100%;
-}
-
-.deck-list-container {
-    width: 33.33%; 
-    border-right: 1px solid #ccc; 
-    padding: 20px;
 }
 
 .deck-description {
@@ -25,6 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 80%
 }
 
 .add-circle-icon {
@@ -41,4 +39,9 @@
     &:hover {
         color: var(--hover-color);
     }
+}
+
+.no-decks {
+    text-align: center;
+    margin: 20px 0;
 }
